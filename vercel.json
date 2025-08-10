@@ -10,5 +10,6 @@
       "src": "/(.*)",
       "dest": "/"
     }
-  ]
+  ],
+  "rewrites": [{ "source": "client/(.*)", "destination": "client/index.html" }]
 }
