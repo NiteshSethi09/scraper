@@ -8,6 +8,10 @@ export async function registerRoutes(app: Express): Promise<Server> {
   const scraper = new WebScraper();
   const schemaGenerator = new SchemaGenerator();
 
+  app.get("/api/getData", (req, res) => {
+    res.status(200).json({ data: "working" });
+  });
+
   app.post("/api/scrape", async (req, res) => {
     try {
       // Validate request body
